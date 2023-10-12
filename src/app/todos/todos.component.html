@@ -1,0 +1,28 @@
+<h1>Todo List</h1>
+
+<!-- <input #itemInput class="form-control" (keyup.enter)="addItem(itemInput)"> -->
+
+<!-- <div *ngIf="items" class="list-group">
+    <button type="button"
+    @fade 
+    *ngFor="let item of items"
+    (click)="removeItem(item)"
+    class="list-group-item">
+    {{ item }}
+</button> -->
+<br>
+
+<div class="container" [@listAnimation]="items.length">
+
+    <button class="btn btn-info mb-4" (click)="pushItem()">Add Item</button> &nbsp;
+    <button class="btn btn-danger mb-4" (click)="removeItem()">Remove Item</button>
+
+    
+
+    <div class="alert alert-primary" id="list" *ngFor="let item of items">
+        {{item}}
+    </div>
+
+    
+</div>
+<!-- </div> -->

@@ -1,0 +1,18 @@
+<div class="card text-center" [@wideNarrow]="isWide ? 'wide' : 'narrow' " [@background]="isBackground ? 'withBackground' : 'noBackground' "
+[@fadeInOut]
+*ngIf="isVisible">
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/768px-Angular_full_color_logo.svg.png"  class="rounded img-fluid" 
+        width="175px" height="175px" />
+    </div>
+    <h2>The Angular Course</h2>
+    <p>Angular animations tutorial</p>
+    <button class="btn btn-primary">Subscribe</button>
+</div>
+<br>
+
+<div>
+    <button class="btn btn-info mx-1" (click)="toogleNormalAnimation()">Toggle normal animation</button> 
+    <button class="btn btn-success mx-1" (click)="toogleBackgroundAnimation()">Toggle keyframes animation</button>
+    <button class="btn btn-warning mx-1" (click)="toggleVisibleAnimation()">Toggle DOM change animation</button>
+</div>
